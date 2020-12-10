@@ -7,6 +7,7 @@ class Cli
 
 def check_date_options
     puts "Curious when to light your candles for Shabbos? Type 'Dates' too see when to light!"
+    puts "Not what you need? Type 'Exit' to exit program"
     check_date
 end
 
@@ -15,7 +16,12 @@ end
 
             if input == "Dates"
                 list_dates
-            else 
+
+            elsif input == "Exit"
+                puts "Exiting..."
+                exit  
+
+            else
                 invalid_date 
                 check_date_options 
             end
@@ -70,6 +76,6 @@ Baruch ata Adonai, Eloheinu Melech ha-olam, asher kidshanu b’mitzvotav vitziva
 Blessed are You, God, Ruler of the universe, who sanctified us with the commandment of lighting Shabbat candles.
 
 Good Shabbos!"
-end 
+end
 end
      
