@@ -50,9 +50,10 @@ def lighting_times_info
         index = input.to_i 
         date = CandleLighting.all[index]
         print_lighting_time(date)
-    else 
+    else
         invalid_date
         lighting_times_info_list
+
     end
 end
 
@@ -69,8 +70,6 @@ Baruch ata Adonai, Eloheinu Melech ha-olam, asher kidshanu b’mitzvotav vitziva
 Blessed are You, God, Ruler of the universe, who sanctified us with the commandment of lighting Shabbat candles.
 
 Good Shabbos!"
-      
 end 
 end
-
      
