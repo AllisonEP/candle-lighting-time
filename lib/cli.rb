@@ -18,8 +18,7 @@ end
                 list_dates
 
             elsif input == "Exit"
-                puts "Exiting..."
-                exit  
+                good_shabbos 
 
             else
                 invalid_date 
@@ -37,7 +36,7 @@ end
 
     def list_dates
           CandleLighting.all.each_with_index do |title, index|
-            puts "#{index}. #{title.date}"
+            puts "#{index + 1}. #{title.date}"
         end
 
         lighting_times_info_list
@@ -51,9 +50,9 @@ end
 def lighting_times_info
     input = get_input
         
-    if input.to_i.between?(0, 60)
+    index = input.to_i - 1
+    if index.between?(0, 60)
 
-        index = input.to_i 
         date = CandleLighting.all[index]
         print_lighting_time(date)
     else
@@ -73,9 +72,15 @@ Don't forget the barakhot:
 
 Baruch ata Adonai, Eloheinu Melech ha-olam, asher kidshanu b’mitzvotav vitzivanu l’hadlik ner shel Shabbat.
 
-Blessed are You, God, Ruler of the universe, who sanctified us with the commandment of lighting Shabbat candles.
+Blessed are You, God, Ruler of the universe, who sanctified us with the commandment of lighting Shabbat candles."
+puts ""
+puts""
+check_date_options
+end
 
-Good Shabbos!"
+def good_shabbos
+    puts "Good Shabbos!"
+    exit 
 end
 end
      

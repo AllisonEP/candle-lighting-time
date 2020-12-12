@@ -11,6 +11,7 @@ class CandleLighting
     end
 
     def self.all 
+        self
         @@all 
     end
 end
